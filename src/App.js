@@ -20,7 +20,7 @@ const seedrandom = require("seedrandom");
     const generateMatches = (arr1, arr2) => {
       const matches = {};
       arr1.forEach(({name, spouse}, i) => {
-        let seed = name + i.toString();
+        let seed = name + i.toString() + "c";
         const generator = seedrandom(seed);
         // console.log(targetIndex)
         let match = name;
@@ -56,7 +56,7 @@ const Reveal = () => {
    return pairsArr.map((pair) => {
       console.log("pair log", pair[0], pair[1]);
       return (
-        <div>
+        <div className='names'>
           <details>
             <summary>{pair[0]}</summary>
             {pair[1]}
@@ -76,8 +76,14 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Miller Family Secret Santa</h1>
-        <h4>a Secret Santa Generator that WON'T sell your personal data</h4>
+        <h4>a Secret Santa Generator that <span>WON'T</span> sell your personal data </h4>
         <h3>(click on your name to see your match)</h3>
+        <div className='marmar'>
+          <img src='marmar.svg'></img>
+        </div>
+        <div className='martree'>
+          <img src='martree.png'></img>
+        </div>
       <Reveal/>
       </header>
 

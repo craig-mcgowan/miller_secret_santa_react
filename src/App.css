@@ -2,7 +2,9 @@
   text-align: center;
 }
 
-
+h1, h4, h3, .names {
+  z-index: 1;
+}
 
 .App-header {
   background-color:green;
@@ -26,15 +28,37 @@ details {
 }
 
 summary{
-  color: white
+  color: white;
+  z-index: 1
 }
 
 details > summary {
   list-style: none;
+  z-index: 2
 }
 details > summary::-webkit-details-marker {
   display: none;
 }
+
+.marmar {
+  position: absolute;
+  z-index: 0;
+  opacity: .6;
+  right: 30%;
+  bottom: 2%;
+}
+.martree {
+  position: absolute;
+  z-index: 0;
+  opacity: .2;
+  top: -2em;
+  left:0%;
+}
+
+span {
+  color:red
+}
+
 
 @keyframes App-logo-spin {
   from {
