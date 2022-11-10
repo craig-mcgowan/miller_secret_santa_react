@@ -3,14 +3,14 @@ import './App.css';
 const seedrandom = require("seedrandom");
 
     const familyMembers = [
-      "Dan",
-      "Rebecca",
-      "Paul",
-      "Heather",
-      "Kathleen",
-      "Dean",
-      "Laura",
-      "Craig",
+      {name:"Dan", spouse: "Rebecca"},
+      {name:"Rebecca", spouse: "Dan"},
+      {name:"Paul", spouse: "Heather"},
+      {name:"Heather", spouse: "Paul"},
+      {name:"Kathleen", spouse: "Dean"},
+      {name:"Dean", spouse: "Kathleen"},
+      {name:"Laura", spouse: "Craig"},
+      {name:"Craig", spouse: "Laura"},
     ];
 
     const familyMembersAgain = [...familyMembers];
@@ -19,18 +19,20 @@ const seedrandom = require("seedrandom");
 
     const generateMatches = (arr1, arr2) => {
       const matches = {};
-      arr1.forEach((person, i) => {
-        let seed = person + "i";
+      arr1.forEach(({name, spouse}, i) => {
+        let seed = name + i.toString();
         const generator = seedrandom(seed);
         // console.log(targetIndex)
-        let match = person;
+        let match = name;
+        console.log("match ", match)
         let count = 0;
-        while (person === match) {
+        while (match === name) {
           const randNum = generator();
           const targetIndex = Math.floor(randNum * arr2.length);
-          if (arr2[targetIndex] !== person) {
+          console.log("match", arr2[targetIndex]["name"])
+          if (arr2[targetIndex]["name"] !== name && arr2[targetIndex]["name"] !== spouse) {
             match = arr2.splice(targetIndex, 1);
-            matches[person] = match[0];
+            matches[name] = match[0]["name"];
           } else {
             count++;
             seed = count.toString() + seed;
@@ -43,7 +45,7 @@ const seedrandom = require("seedrandom");
     };
 
     const secretSantaPairs = generateMatches(familyMembers, familyMembersAgain);
-
+    console.log(secretSantaPairs)
     const pairsArr = Object.entries(secretSantaPairs);
     console.log("pairsArr", pairsArr);
 
