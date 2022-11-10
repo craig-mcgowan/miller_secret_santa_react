@@ -82,7 +82,7 @@ function App() {
           <img src='marmar.svg'></img>
         </div>
         <div className='martree'>
-          <img src='martree.png'></img>
+          <img className="martreepic" src='martree.png'></img>
         </div>
       <Reveal/>
       </header>
