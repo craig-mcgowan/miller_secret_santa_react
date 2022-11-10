@@ -20,7 +20,7 @@ const seedrandom = require("seedrandom");
     const generateMatches = (arr1, arr2) => {
       const matches = {};
       arr1.forEach((person, i) => {
-        let seed = person + "b";
+        let seed = person + "i";
         const generator = seedrandom(seed);
         // console.log(targetIndex)
         let match = person;
