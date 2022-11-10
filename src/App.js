@@ -74,7 +74,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Miller Family Secret Santa</h1>
-        <h4>a Secret Santa Generator that WONT sell your personal data</h4>
+        <h4>a Secret Santa Generator that WON'T sell your personal data</h4>
         <h3>(click on your name to see your match)</h3>
       <Reveal/>
       </header>
