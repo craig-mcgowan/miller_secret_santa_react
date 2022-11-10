@@ -4,6 +4,7 @@
 
 h1, h4, h3, .names {
   z-index: 1;
+  margin-top: 10px;
 }
 
 .App-header {
@@ -30,7 +31,8 @@ details {
 
 summary{
   color: white;
-  z-index: 1
+  z-index: 1;
+  font-size: 40px;
 }
 
 details > summary {
