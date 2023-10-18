@@ -20,7 +20,7 @@ const seedrandom = require("seedrandom");
     const generateMatches = (arr1, arr2) => {
       const matches = {};
       arr1.forEach(({name, spouse}, i) => {
-        let seed = name + i.toString() + "marlow";
+        let seed = name + i.toString() + "dietpepsi";
         const generator = seedrandom(seed);
         // console.log(targetIndex)
         let match = name;
@@ -79,12 +79,14 @@ function App() {
         <h4>a Secret Santa Generator that <span>WON'T</span> sell your personal data </h4>
         <h3>(click on your name to see your match)</h3>
         <div className='marmar'>
-          <img src='marmar.svg'></img>
+          <img src='marmar.svg' alt='marlow with reindeer antlers'></img>
         </div>
         <div className='martree'>
-          <img className="martreepic" src='martree.png'></img>
+          <img className="martreepic" src='martree.png' alt='marlow in front of a christmas tree'></img>
         </div>
-      <Reveal/>
+        <div className='familyNames'>
+          <Reveal/>
+        </div>
       </header>
 
       
