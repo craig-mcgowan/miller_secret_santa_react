@@ -20,9 +20,8 @@ const seedrandom = require("seedrandom");
     const generateMatches = (arr1, arr2) => {
       const matches = {};
       arr1.forEach(({name, spouse}, i) => {
-        let seed = name + i.toString() + "dietpepsi";
+        let seed = name + i.toString() + "barn";
         const generator = seedrandom(seed);
-        // console.log(targetIndex)
         let match = name;
         console.log("match ", match)
         let count = 0;
@@ -84,9 +83,8 @@ function App() {
         <div className='martree'>
           <img className="martreepic" src='martree.png' alt='marlow in front of a christmas tree'></img>
         </div>
-        <div className='familyNames'>
-          <Reveal/>
-        </div>
+        <Reveal/>
+
       </header>
 
       
