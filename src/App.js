@@ -20,7 +20,7 @@ const seedrandom = require("seedrandom");
     const generateMatches = (arr1, arr2) => {
       const matches = {};
       arr1.forEach(({name, spouse}, i) => {
-        let seed = name + i.toString() + "barn";
+        let seed = name + i.toString() + "benjamin dean mcgowan";
         const generator = seedrandom(seed);
         let match = name;
         console.log("match ", match)
@@ -75,19 +75,30 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Miller Family Secret Santa</h1>
-        <h4>a Secret Santa Generator that <span>WON'T</span> sell your personal data </h4>
+        <h4>
+          a Secret Santa Generator that <span>WON'T</span> sell your personal
+          data{" "}
+        </h4>
         <h3>(click on your name to see your match)</h3>
-        <div className='marmar'>
-          <img src='marmar.svg' alt='marlow with reindeer antlers'></img>
+        <div className="marmar">
+          <img src="marmar.svg" alt="marlow with reindeer antlers"></img>
         </div>
-        <div className='martree'>
-          <img className="martreepic" src='martree.png' alt='marlow in front of a christmas tree'></img>
+        <div className="martree">
+          <img
+            className="martreepic"
+            src="martree.png"
+            alt="marlow in front of a christmas tree"
+          ></img>
         </div>
-        <Reveal/>
-
+        <div className="benben">
+          <img
+            className="benbenpic"
+            src="benben.png"
+            alt="ben and jane dinos"
+          ></img>
+        </div>
+        <Reveal />
       </header>
-
-      
     </div>
   );
 }

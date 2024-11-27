@@ -46,6 +46,10 @@ details > summary::-webkit-details-marker {
 .martreepic {
   width:90%
 }
+.benbenpic {
+  max-width:50%;
+  
+}
 
 .marmar {
   position: absolute;
@@ -61,6 +65,23 @@ details > summary::-webkit-details-marker {
   top: -2em;
   left:0%;
 }
+.benben {
+  position: absolute;
+  z-index: 0;
+  opacity: .4;
+  right: 0;
+  bottom: 15%;
+  margin: 0;
+  stroke: black;
+  stroke-width: 4px;
+  display: flex;
+  flex-direction: row-reverse;
+  
+  
+
+}
+
+
 
 span {
   color:red
